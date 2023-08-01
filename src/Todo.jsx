@@ -8,7 +8,7 @@ const Todo = () => {
         if(inputValue.trim()!==''){
             const newTodo = {
                 id: new Date().getTime(),
-                Text: inputValue,
+                text: inputValue,
             }
             setTodos([...todos,newTodo]);
             setInputValue('');
