@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './Todo.css';
 
 const Todo = () => {
     const [todos,setTodos] = useState([]);
@@ -60,8 +61,10 @@ const Todo = () => {
         {todos.map((todo)=>(
             <li key={todo.id}>
             {todo.text}
+            <div>
             <button onClick={()=>deleteTodo(todo.id)}>Delete</button>
             <button onClick={()=>enterEaditMode(todo.id, todo.text)}>Edit</button>
+            </div>
             </li>
         ))}
      </ul>
